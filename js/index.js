@@ -42,13 +42,14 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 
-const newNav = document.querySelectorAll('nav a');
+const newNav = document.querySelectorAll('nav a')
 newNav[0].textContent=siteContent['nav']['nav-item-1']
 newNav[1].textContent=siteContent['nav']['nav-item-2']
 newNav[2].textContent=siteContent['nav']['nav-item-3']
 newNav[3].textContent=siteContent['nav']['nav-item-4']
 newNav[4].textContent=siteContent['nav']['nav-item-5']
 newNav[5].textContent=siteContent['nav']['nav-item-6']
+
 
 
  
@@ -85,6 +86,25 @@ newP[8].textContent=siteContent['footer']['copyright']
 
 let newpicture = document.getElementById("middle-img");
 newpicture.setAttribute("src", siteContent["main-content"]["middle-img-src"])
+
+let newNavi = document.querySelectorAll("a");
+newNavi.forEach(tag => {
+  tag.style.color = "green";
+});
+
+let nav = document.querySelector("nav");
+
+let newThing = document.createElement("a");
+newThing.setAttribute("src", "#")
+newThing.textContent = "Things";
+nav.append(newThing);
+
+let ball = document.createElement("a")
+ball.setAttribute("src", "#")
+ball.textContent = "Ball";
+nav.prepend(ball)
+
+
 
 
 
